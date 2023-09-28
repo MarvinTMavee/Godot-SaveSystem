@@ -1,7 +1,7 @@
 extends Node
 
-var default_values = { #This is the default save file, it will be used to create a new save file if none is found
-    "version": "1", #<-- Whenever you update the save file, remember to update this value, otherwise the game will not migrate the data which can cause issues accessing not existing values
+var default_values = { #This is the default save file, it will be used to create a new save file if none is found. Everything written here will also be migrated to the save file
+    "version": "1", #<-- Whenever you update the save file, remember to update this value, otherwise the game will not migrate the data which can cause issues accessing non existing values
     "player_name": "Player",
     "player_level": 1,
     "player_exp": 0,
