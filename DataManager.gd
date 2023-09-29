@@ -13,10 +13,8 @@ var default_values = { #This is the default save file, it will be used to create
 
 func saveInit(): #This shall be run on game start
     if not FileAccess.file_exists("user://save.data"):
-        var file = FileAccess.new()
-        file.open("user://save.data", FileAccess.WRITE)
+        var file = FileAccess.open("user://save.data", FileAccess.WRITE)
         file.store_string(JSON.stringify(default_values))
-        file.close()
         print("Created new save file")
     else:
         print("Save file found")
